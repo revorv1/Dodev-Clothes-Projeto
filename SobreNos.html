@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="menuhamburguer.js" defer="true"></script>
+</head>
+
+<body>
+    <nav>
+
+        <div id="menu">
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                
+                <li><a href="SobreNos.html">Sobre Nós</a></li>
+            </ul>
+            <div class="burger-menu">&#9776;</div>
+        </div>
+        <div class="container">
+            <div class="options">
+                <a href="Home.html"></a>
+
+            </div>
+            
+            </div>
+            <div class="options">
+                <a href="SobreNos.html"></a>
+            </div>
+
+        </div>
+        
+
+    </nav>
+    <h1 class="titulo">Sobre nós
+        <p>Sobre Nós
+            Bem-vindo à Dodev clothes!
+
+            Somos uma empresa dedicada a proporcionar experiências únicas e produtos de qualidade aos nossos clientes.
+            Desde a nossa fundação, buscamos oferecer soluções inovadoras e serviços excepcionais para atender às
+            necessidades e superar as expectativas de quem confia em nós.
+
+            Missão: Nossa missão é inspirar e facilitar a vida das pessoas, fornecendo produtos e serviços que agreguem
+            valor e promovam bem-estar em suas vidas.
+
+            Visão: Nosso objetivo é ser reconhecidos como líderes no setor, destacando-nos pela excelência em qualidade,
+            atendimento ao cliente e inovação contínua.
+
+            Valores: Nossos valores fundamentais são integridade, qualidade, comprometimento e inovação. Esses
+            princípios orientam todas as nossas decisões e ações, garantindo que sempre atuemos de forma ética e
+            responsável.
+
+            Na Dodev clothes, valorizamos a confiança e a satisfação dos nossos clientes acima de tudo. Estamos
+            constantemente empenhados em melhorar e evoluir, buscando sempre oferecer produtos e serviços que atendam às
+            necessidades em constante mudança do mercado.
+
+            Nossa equipe é formada por profissionais talentosos e apaixonados pelo que fazem, comprometidos em oferecer
+            uma experiência excepcional em cada interação com nossos clientes. Estamos aqui para ajudar e estamos
+            comprometidos em garantir sua total satisfação.
+
+            Obrigado por escolher a Dodev. Esperamos que você aproveite sua jornada conosco e estamos
+            ansiosos para atendê-lo!
+
+        </p>
+
+
+
+    </h1>
+    <form id="meuFormulario" onsubmit="saveBeforeSubmit()">
+
+        <div class="daddy">
+          <div class="base">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+    
+          </div>
+          <div class="base">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+    
+          </div>
+          <div class="base">
+            <label for="telefone">Informe o número do DDD e celular: </label>
+            <input type="tel" id="telefone" name="telefone" placeholder="99-99999-9999"
+              pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"> <br />
+    
+            <input type="button" value="Submit" onclick="enviarParaAPI()">
+    
+          </div>
+        </div>
+      </form>
+       <script src="salvarDados.js"></script>
+
+
+</body>
+
+</html>

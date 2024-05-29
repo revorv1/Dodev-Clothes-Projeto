@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="menuhamburguer.js" defer="true"></script>
+   
+    <style>
+        .principal {
+            display: flex;
+            align-items: center;
+        }
+
+        .principal img {
+            margin-right: 10px;
+            /* Adicione margem direita para espaçamento entre a imagem e o texto */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: right;
+            display: flex;
+            align-items: center;
+        }
+
+        #carrinho-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #2b2828;
+            color: #333;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        #carrinho-count {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        #carrinho-menu {
+            position: fixed;
+            top: 50px;
+            right: 10px;
+            background-color: #502faa;
+            border: 1px solid #b64141;
+            padding: 10px;
+            display: none;
+        }
+
+        #carrinho-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #carrinho-menu li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="carrinho-menu">
+        <h2>Carrinho</h2>
+        <ul id="carrinho-list"></ul>
+       
+    </div>
+    </div>
+    <nav>
+        <div id="menu">
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+
+                <li><a href="SobreNos.html">Sobre Nós</a></li>
+            </ul>
+           
+
+            <div id="carrinho-count">0</div>
+            <div class="burger-menu">&#9776;</div>
+        </div>
+        <div class="container">
+            <div class="options">
+                <a href="Home.html"></a>
+            </div>
+            <div class="options">
+                <a href="ProdutoIndividual.html"></a>
+            </div>
+            <div class="options">
+                <a href="SobreNos.html"></a>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="produtoSolo">
+        <style>
+            .principal {
+                display: flex;
+                align-items: center;
+            }
+
+            .principal img {
+                margin-right: 10px;
+            }
+        </style>
+        <div class="principal">
+            <img id="imagemPrincipal" src="modelo3.png" width="400px" height="450px" alt="modelo3.png">
+        </div>
+        <h1>Camiseta
+            <label>R$ 40,00</label>
+
+            <div>
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" value="1" min="1">
+            </div>
+            <div>
+
+                <details>
+                    <summary>Tamanho</summary>
+                    <select id="tamanho" name="tamanho">
+                        <option value="Pequeno">P</option>
+                        <option value="Médio">M</option>
+                        <option value="Grande">G</option>
+                    </select>
+
+                </details>
+
+
+                <button id="add-to-cart-button">Adicionar ao Carrinho</button>
+
+            </div>
+
+        </h1>
+    </div>
+
+    </script>
+    <div id="containerModelos">
+        <div class="modelos">
+            <img id="modelo1" src="foto1.png" width="300px" height="350px" alt="Foto 1">
+        </div>
+        <div class="modelos">
+            <img id="modelo2" src="modelo2.png" width="300px" height="350px" alt="Modelo 2">
+        </div>
+        <div class="modelos">
+            <img id="modelo3" src="modelo1.png" width="300px" height="350px" alt="Modelo 1">
+        </div>
+    </div>
+    <form id="meuFormulario" onsubmit="saveBeforeSubmit()">
+        <div class="daddy">
+            <div class="base">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome">
+
+            </div>
+            <div class="base">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+
+            </div>
+            <div class="base">
+                <label for="telefone">Informe o número do DDD e celular: </label>
+                <input type="tel" id="telefone" name="telefone" placeholder="99-99999-9999"
+                    pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"> <br />
+
+                <input type="button" value="Submit" onclick="enviarParaAPI()">
+
+            </div>
+        </div>
+    </form>
+    <script src="carrinho.js"></script>
+    <script src="salvarDados.js"></script>
+    <script src="trocarFoto.js"></script>
+
+</body>
+
+</html>
